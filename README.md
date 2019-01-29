@@ -4,7 +4,7 @@ A neighborhood map web app
 
 # Third party Apis used
 
- Yelp
+ Yelp for populating info window content and axios for sending http requests
 
 
 # Code
