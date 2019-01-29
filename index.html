@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Neighborhood Map</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+</head>
+
+<body>
+
+  <span id="btnPushMenu" onclick="openNav()">&#9776;</span>
+  <div id="map"></div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <input id="searchTextField" data-bind="textInput: searchValue" placeholder="Search..." id="search-field" type="text" name="searchField" />
+
+  <div id="divListItems" data-bind="foreach: filterableList">
+    <il  class="listItem" data-bind="text: name, click: onListItemClick" ></il>
+  </div>
+
+
+  </div>
+
+
+
+
+  <script src="js/MapViewModel.js">
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbG7g9Z_czB0xo2iG3HERukg00teL_syY&callback=initMap" async defer></script>
+</body>
+
+</html>
